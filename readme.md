@@ -1,9 +1,7 @@
 # Getting started
--
-
 
 ### Run the API
-: dotnet.exe IoTApiMock.dll
+'dotnet.exe IoTApiMock.dll'
 
 The program is served on the following URL: http://localhost:5000
 
