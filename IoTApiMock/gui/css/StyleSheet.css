@@ -1,0 +1,74 @@
+﻿
+#content {
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.brand-logo {
+    white-space: nowrap;
+}
+
+#inventxLogo {
+    max-height: 100%;
+    max-width: 150px;
+    width: auto;
+    margin-left: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+
+#machine {
+    max-height: 200px;
+    display: block;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+#startButton {
+    margin-left: 20%;
+}
+
+#stopButton {
+    float: right;
+    margin-right: 20%;
+}
+
+#deviceTitle {
+    margin-top: 30px;
+}
+
+h4 {
+    float: left;
+}
+
+#dropdown{
+    width: 200px;
+    float:right;
+}
+
+#toast-container {
+    top: auto !important;
+    right: auto !important;
+    bottom: 10%;
+    left:1%;  
+}
+th{
+    width:50%; 
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: black;
+}
+
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: red;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid red;
+    box-shadow: 0 1px 0 0 red;
+}

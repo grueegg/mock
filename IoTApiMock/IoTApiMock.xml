@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IoTApiMock</name>
+    </assembly>
+    <members>
+        <member name="M:IoTApiMock.Controllers.DeviceController.GetOrCreateDeviceInformation">
+            <summary>
+            Get a List of all available Devices. 
+            </summary>
+            <remarks>
+            If no device is available this method will create a new device.
+            </remarks>
+            <response code="500">In case of general error</response>
+        </member>
+        <member name="M:IoTApiMock.Controllers.DeviceController.GetSingleDevice(System.Int32)">
+            <summary>
+            Gets a specific device
+            </summary>
+            <param name="serialNumber">The serial number of your device</param>
+            <response code="404">In case device was not found</response>
+            <response code="500">In case of general error</response>
+        </member>
+        <member name="M:IoTApiMock.Controllers.DeviceController.GetTokens(System.Int32)">
+            <summary>
+            Returns tokens already being submitted for this device
+            </summary>
+            <param name="serialNumber">The serial number of your device</param>
+            <response code="404">In case device was not found</response>
+            <response code="500">In case of general error</response>
+        </member>
+        <member name="M:IoTApiMock.Controllers.DeviceController.AddWorkToken(System.Int32,IoTApiMock.Models.TokenSubmitModel)">
+            <summary>
+            Add Token to deivce
+            </summary>
+            <param name="serialNumber">The serial number of your device</param>
+            <response code="204">If the token was successfully added</response>
+            <response code="400">In case the token is invalid</response>
+            <response code="404">In case device was not found</response>
+            <response code="500">In case of general error</response>
+        </member>
+        <member name="M:IoTApiMock.Controllers.DeviceController.StartWork(System.Int32)">
+            <summary>
+            Turn the specific device on
+            </summary>
+            <param name="serialNumber">The serial number of your device</param>
+            <response code="200">If the deivce has been successfully turned on</response>
+            <response code="404">In case device was not found</response>
+            <response code="405">If device does not start because it's already running or the device have no valid credit.</response>
+            <response code="500">In case of general error</response>
+        </member>
+        <member name="M:IoTApiMock.Controllers.DeviceController.StopWork(System.Int32)">
+            <summary>
+            Turn the specific device off
+            </summary>
+            <param name="serialNumber">The serial number of your device</param>
+            <response code="200">If device has been successfully turned off, is also returned if the device has already been switched off</response>
+            <response code="404">In case device was not found</response>
+            <response code="500">In case of general error</response>
+        </member>
+        <member name="M:IoTApiMock.Controllers.MaintenanceController.ResetDatabase">
+            <summary>
+            Delete all user produced data
+            </summary>
+            <response code="200">If all data has been successfully reseted</response>
+            <response code="500">In case of general error</response>
+        </member>
+        <member name="M:IoTApiMock.Controllers.MaintenanceController.AddDevice(IoTApiMock.Models.DeviceCreationModel)">
+            <summary>
+            Add one more device
+            </summary>
+            <response code="200">If Devices has been successfully added</response>
+            <response code="500">In case of general error</response>
+        </member>
+        <member name="M:IoTApiMock.Controllers.TokenController.GetToken(System.Int32,System.Int64)">
+            <summary>
+            Issue new Token for a specific device
+            </summary>
+            <param name="serialNumber">The serial number of your device</param>
+            <response code="404">In case device was not found</response>
+            <response code="500">In case of general error</response>
+        </member>
+    </members>
+</doc>

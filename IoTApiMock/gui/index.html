@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Iot Device</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="js/Device.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/StyleSheet.css">
+    <link rel='shortcut icon' type='image/x-icon' href='images/inventx.ico' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+</head>
+<body class="white">
+    <nav class="nav-extended black">
+        <div class="nav-wrapper">
+            <div><img alt="INVENTX AG" id="inventxLogo" src="images/inventx_logo.png" />
+                <a class="brand-logo white-text center">Device Management</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="content">
+        <img alt="device" id="machine" src="images/robotic-arm.jpg" />
+
+        <div id="home" class="col s12">
+            <a id="startButton" class="waves-effect waves-light red btn-large disabled" onclick="startDevice()"><i
+                    class="material-icons left">play_arrow</i>Start</a>
+            <a id="stopButton" class="waves-effect waves-light red btn-large disabled" onclick="stopDevice()"><i class="material-icons left">stop</i>Stop</a>
+        </div>
+        <div id="deviceTitle">
+            <h4 >Device information</h4>
+            <div id="dropdown" class="input-field col s12">
+                <select id="deviceselector" class="">
+                </select>
+                <label>Select Device</label>
+            </div>
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Serial Number</th>
+                    <td id="deviceSerialNumber"></td>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <td id="deviceName"></td>
+
+                </tr>
+                <tr>
+                    <th>Work Counter</th>
+                    <td id="deviceWorkCounter"></td>
+                </tr>
+                <tr>
+                    <th>Credit</th>
+                    <td id="deviceCredit"></td>
+                </tr>
+                <tr>
+                    <th>Is Working</th>
+                    <td id="deviceIsWorking"></td>
+                </tr>
+                <tr>
+                    <th>Last Service</th>
+                    <td id="deviceLastService"></td>
+                </tr>
+                <tr>
+                    <th>Next Service</th>
+                    <td id="deviceNextService"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
